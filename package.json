@@ -1,0 +1,33 @@
+{
+  "name": "dragonball-quiz",
+  "version": "1.0.0",
+  "description": "A web application that tests the user's knowledge of the hit TV franchise, Dragon Ball.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dscherer21/dragonball-quiz.git"
+  },
+  "keywords": [
+    "React",
+    "Hooks",
+    "Express",
+    "Node",
+    "Sass",
+    "Jest",
+    "Bootstrap"
+  ],
+  "author": "dscherer21",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dscherer21/dragonball-quiz/issues"
+  },
+  "homepage": "https://github.com/dscherer21/dragonball-quiz#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
