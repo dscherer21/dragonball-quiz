@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2109f7489c4607f0837d4a530216ed1",
+    "revision": "5b5995dd13765e305d23d4079e9c0d4f",
     "url": "/index.html"
   },
   {
-    "revision": "bbb9e17221ba376ed925",
+    "revision": "d701874c7eae42b78f86",
     "url": "/static/css/main.5f361e03.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.3e9221e2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bbb9e17221ba376ed925",
-    "url": "/static/js/main.85fa7300.chunk.js"
+    "revision": "d701874c7eae42b78f86",
+    "url": "/static/js/main.f0676530.chunk.js"
   },
   {
     "revision": "6f0234b4b87d585d06e8",
     "url": "/static/js/runtime-main.cfae3202.js"
   },
   {
-    "revision": "5d5d9eefa31e5e13a6610d9fa7a283bb",
-    "url": "/static/media/logo.5d5d9eef.svg"
+    "revision": "523578a0a62a5453585082d992e1ac43",
+    "url": "/static/media/dragonballbackground.523578a0.jpg"
   }
 ]);
