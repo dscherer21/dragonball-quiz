@@ -59,7 +59,7 @@ const questions = [
         choices: [
             "He loses to Goku in an Energy Beam showdown.",
             "Yajirobe cuts his tail off.",
-             "Piccolo hits him with his Special Beam Cannon.",
+            "Piccolo hits him with his Special Beam Cannon.",
             "Gohan, in his Great Ape form, falls on top of him."
         ],
         answer: "Gohan, in his Great Ape form, falls on top of him.",
@@ -77,7 +77,7 @@ const questions = [
         explanation: "At first, Zarbon left Vegeta for dead, but came back to collect Vegeta after Frieza ordered him to. Zarbon put Vegeta in a Rejuvenation Chamber, so they could question him about the Dragon Balls and discuss his betrayal of Frieza after he recovered."
     },
     {
-        question: "In Dragon Ball Z, during the Android Saga when Gohan was carrying Bulma, Baby Trunks, and Yajirobe back to Capsule Corp, why did they have to stop?",
+        question: "In Dragon Ball Z, during the Android Saga, when Gohan was carrying Bulma, Baby Trunks, and Yajirobe back to Capsule Corp, why did they have to stop?",
         choices: [
             "They stopped so they could have lunch.",
             "Piccolo called out to Gohan telepathically that he was in trouble, so Gohan left to help him.",
@@ -88,7 +88,7 @@ const questions = [
         explanation: "On the way to Capsule Corp, Bulma comments on how quiet Trunks was being and holds him up. At this point, Trunks' diaper leaks all over Yajirobe's head and he freaks out. They stop so Bulma can change Trunks and Yajirobe can clean up."
     },
     {
-        question: "In Dragon Ball Z, on the day of the Cell Games, who was the first person to fight Cell?",
+        question: "In Dragon Ball Z, during the Cell Games Saga, on the day of the Cell Games, who was the first person to fight Cell?",
         choices: [
             "Goku",
             "Mr. Satan",
@@ -99,7 +99,7 @@ const questions = [
         explanation: "Right before Hercule could challenge Cell, students of his fighting dojo, Caroni and Pirozshki, showed up to challenge. Caroni was the first challenger. When Caroni tried to go for an aerial attack at Cell, he was quickly defeated when Cell raised his power to launch Caroni high in sky and landing outside the ring."
     },
     {
-        question: "In Dragon Ball Z, how did Krillin and Piccolo break free of Dabura's petrification spit?",
+        question: "In Dragon Ball Z, during the Buu Saga, how did Krillin and Piccolo break free of Dabura's petrification spit?",
         choices: [
             "Videl's feelings for Gohan made Dabura realize that he wanted to become a good person.",
             "Vegeta grew impatient with Gohan's lack of training, and killed Dabura himself.",
@@ -110,7 +110,7 @@ const questions = [
         explanation: "Supreme Kai stated that Dabura would need to die to break the petrification. Later, when Dabura realized that Majin Buu was unstable and tried to attack him, Buu turned Dabura into a cookie and ate him. This caused the petrification on Krillin and Piccolo to be released."
     },
     {
-        question: "In Dragon Ball GT, who kills Dolltaki?",
+        question: "In Dragon Ball GT, during the Black Star Dragon Ball Saga, who kills Dolltaki?",
         choices: [
             "Goku",
             "Lord Luud",
@@ -121,7 +121,7 @@ const questions = [
         explanation: "After escaping from Lord Luud, Dolltaki attempts to report to Dr. Myuu about Luud's destruction, but is confronted by General Rilldo who kills him with a Ki Blast."
     },
     {
-        question: "In Dragon Ball GT, how does Mr. Satan avoid being infected by Baby?",
+        question: "In Dragon Ball GT, during the Baby Saga, how does Mr. Satan avoid being infected by Baby?",
         choices: [
             "Baby delights in turning the world against it's savior.",
             "He hides in an underground bunker in his mansion.",
@@ -129,18 +129,84 @@ const questions = [
             "He pretends to be infected and is overlooked by Baby."
         ],
         answer: "He is absorbed by Majin Buu.",
-        explanation: "Buu is immune to Baby's mind control infection, and, in order to protect him, hides Mr. Satan in one of his pods inside Buu's body."
+        explanation: "Buu is immune to Baby's mind control infection. In order to protect him, Buu hides Mr. Satan in one of his pods inside his body."
     },
     {
-        question: "In Dragon Ball GT, how does Mr. Satan avoid being infected by Baby?",
+        question: "In Dragon Ball GT, during the Super 17 Saga, who is the first earth fighter to encounter Android 17?",
         choices: [
-            "Baby delights in turning the world against it's savior.",
-            "He hides in an underground bunker in his mansion.",
-            "He is absorbed by Majin Buu.",
-            "He pretends to be infected and is overlooked by Baby."
+            "Pan",
+            "Goku",
+            "Trunks",
+            "Goten"
         ],
-        answer: "He is absorbed by Majin Buu.",
-        explanation: "Buu is immune to Baby's mind control infection, and, in order to protect him, hides Mr. Satan in one of his pods inside Buu's body."
+        answer: "Trunks",
+        explanation: "Trunks is riding in a limo on his way to a meeting when Android 17 lands in front of it and quickly blows it up. He then tells Trunks to give a message to Goku to come to Hell alone to stop the Earth invasion."
+    },
+    {
+        question: "In Dragon Ball GT, during the Shadow Dragon Saga, which wish created Oceanus Shenron?",
+        choices: [
+            "The wish for the most comfortable pair of underwear.",
+            "The wish to revive Bora, Upa's father.",
+            "The wish to restore King Piccolo's youth.",
+            "The wish to revive Goku."
+        ],
+        answer: "The wish for the most comfortable pair of underwear.",
+        explanation: "When they first encounter Oceanus Shenron, Goku insists on knowing which wish created her. At this question, Oceanus Shenron gets embarassed and blurts out that it was the underwear wish. Goku laughs out loud at this, which provokes Oceanus to attakc."
+    },
+    {
+        question: "In Dragon Ball GT, during the Shadow Dragon Saga, who defeats Nuova Shenron the first time?",
+        choices: [
+            "Syn Shenron",
+            "Eis Shenron",
+            "Super Saiyan 4 Vegeta",
+            "Super Saiyan 4 Goku"
+        ],
+        answer: "Syn Shenron",
+        explanation: "Goku is blinded by a cheap shot by Eis Shenron. Even so, Goku defeats him with a Dragonfist attack. After this, Nuova Shenron, wanting a fair fight, offers to fight Goku after he recovers. At this point, Syn Shenron steps in and tries to blast Goku. Nuova jumps in the way and takes the blast, instead. Nuova fades away shortly after."
+    },
+    {
+        question: "In Dragon Ball Super, during the Beerus Saga, where does Beerus first encounter Goku?",
+        choices: [
+            "On Bulma's Birthday Cruise",
+            "On King Kai's Planet",
+            "At Goku's Farm",
+            "At Hercule's Mansion"
+        ],
+        answer: "On King Kai's Planet",
+        explanation: "After Hercule gives Gokue 100 million zenni for saving the Earth from Buu, Chi-Chi allows him to give up farming and go train at King Kai's Planet. Beerus and Whis show up asking about the Super Saiyan God. Goku challenges Beerus and is quickly defeated."
+    },
+    {
+        question: "In Dragon Ball Super, during the Golden Frieza Saga, what does Vegeta tell Whis is the tastiest food of all?",
+        choices: [
+            "Tempura",
+            "Strawberry Sundae",
+            "Pudding",
+            "Instant Ramen"
+        ],
+        answer: "Instant Ramen",
+        explanation: "Vegeta tries to tempt Whis with different foods to get Whis to train him. To his dismay, Bulma has already taken Whis to try all of the foods he suggests. Finally, Vegeta suggests that Bulma has been hiding the tastiest food of all from him, Instant Ramen. After trying it, Whis is shocked and agrees to train Vegeta."
+    },
+    {
+        question: "In Dragon Ball Super, during the Duplicate Vegeta Saga, what does Potage tell Vegeta to do to slow him from phasing out of existance?",
+        choices: [
+            "To suck on a pacifier",
+            "To Hug his son",
+            "To stand in ridiculous pose",
+            "To sing The Song That Never Ends"
+        ],
+        answer: "To suck on a pacifier",
+        explanation: "When Trunks notices that Vegeta is starting phase out faster, Potage suggests that he suck on the Commeson Key, which looks like a pacifier, to slow the process. Goku makes fun of him for chewing on a pacifier. Later, when Vegeta learns what a pacifier is, he states that he would have rather died than be seen sucking on the key."
+    },
+    {
+        question: "In Dragon Ball Super, during the Duplicate Vegeta Saga, what does Potage tell Vegeta to do to slow him from phasing out of existance?",
+        choices: [
+            "To suck on a pacifier",
+            "To Hug his son",
+            "To stand in ridiculous pose",
+            "To sing The Song That Never Ends"
+        ],
+        answer: "To suck on a pacifier",
+        explanation: "When Trunks notices that Vegeta is starting phase out faster, Potage suggests that he suck on the Commeson Key, which looks like a pacifier, to slow the process. Goku makes fun of him for chewing on a pacifier. Later, when Vegeta learns what a pacifier is, he states that he would have rather died than be seen sucking on the key."
     },
 ];
 
