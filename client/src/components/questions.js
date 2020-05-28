@@ -146,7 +146,7 @@ const questions = [
         question: "In Dragon Ball GT, during the Shadow Dragon Saga, which wish created Oceanus Shenron?",
         choices: [
             "The wish for the most comfortable pair of underwear.",
-            "The wish to revive Bora, Upa's father.",
+            "The wish to revive Bora, Oopa's father.",
             "The wish to restore King Piccolo's youth.",
             "The wish to revive Goku."
         ],
@@ -198,15 +198,26 @@ const questions = [
         explanation: "When Trunks notices that Vegeta is starting phase out faster, Potage suggests that he suck on the Commeson Key, which looks like a pacifier, to slow the process. Goku makes fun of him for chewing on a pacifier. Later, when Vegeta learns what a pacifier is, he states that he would have rather died than be seen sucking on the key."
     },
     {
-        question: "In Dragon Ball Super, during the Duplicate Vegeta Saga, what does Potage tell Vegeta to do to slow him from phasing out of existance?",
+        question: "In Dragon Ball Super, during the Goku Black Saga, why has Goku Black teamed up with Zamasu?",
         choices: [
-            "To suck on a pacifier",
-            "To Hug his son",
-            "To stand in ridiculous pose",
-            "To sing The Song That Never Ends"
+            "Zamasu has mind-controlled Goku Black.",
+            "Goku Black is also Zamasu.",
+            "Zamasu used the Super Dragon Balls to wish for Goku to serve him.",
+            "When Chi-Chi was murdered in front of him, Goku felt that the world needed to be punished."
         ],
-        answer: "To suck on a pacifier",
-        explanation: "When Trunks notices that Vegeta is starting phase out faster, Potage suggests that he suck on the Commeson Key, which looks like a pacifier, to slow the process. Goku makes fun of him for chewing on a pacifier. Later, when Vegeta learns what a pacifier is, he states that he would have rather died than be seen sucking on the key."
+        answer: "Goku Black is also Zamasu.",
+        explanation: "Zamasu collected the Super Dragon Balls and wished to switch bodies with Goku. After murdering Goku and his family, he used the Time Ring to transport to Future Trunks' timeline. There he helped the Zamasu of that universe to wish for immortality, and began their takeover of Earth."
+    },
+    {
+        question: "In Dragon Ball Super, during the Tournament of Power Saga, why does Majin Buu not go to the tournament?",
+        choices: [
+            "Beerus is too angry with Buu for eating his food and tells Goku not to include him.",
+            "Buu is scared that Mr. Satan will get injured again and decides not to go.",
+            "Gohan thinks that Buu will not be able to control himself and start killing people.",
+            "Buu falls asleep and no one is able to wake him."
+        ],
+        answer: "Buu falls asleep and no one is able to wake him.",
+        explanation: "When Buu falls asleep, Mr. Satan tells the team that he often will sleep for months at a time, and no one will be able to wake him. Seeing as how Buu will not be awake in time for the tournament, Goku gets the idea to recruit Frieza from Hell to replace Buu on their team."
     },
 ];
 
