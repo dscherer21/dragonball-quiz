@@ -1,24 +1,27 @@
-import React from 'react';
-import Background from './images/dragonballbackground.jpg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  const[mainDisplay, setMainDisplay] = useState(
+    <section>
+      <p>Welcome to the <span>Dragon Ball Quiz</span>! This quiz will test your knowledge of the entire <span>Dragon Ball</span> franchise. It will contain questions from <span>Dragon Ball</span>, <span>Dragon Ball Z</span>, <span>Dragon Ball GT</span>, and <span>Dragon Ball Super</span>. Your final results will then compared to a character from the show.</p>
+      <button>Start</button>
+    </section>
+  );
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={Background} className="App-logo" alt="Dragon Ball Background" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>Dragon Ball Quiz</h1>
       </header>
+      <main>
+        {mainDisplay}
+        <section>
+          <audio controls loope='loop'>
+            <source src="./media/DragonBallZFunimationIntro.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </section>
+      </main>
     </div>
   );
 }
