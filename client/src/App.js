@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './App.scss';
 import Audio from './media/dragonballzfunimationintro.mp3';
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
       <main>
         {mainDisplay}
         <section>
+          <h4>Dragon Ball Z Funimation Intro</h4>
           <audio controls loop='loop' title='Dragon Ball Z Funimation Intro'>
             <source src={Audio} type="audio/mpeg" />
             Your browser does not support the audio element.
