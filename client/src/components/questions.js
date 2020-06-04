@@ -132,7 +132,7 @@ const questions = [
         explanation: "Buu is immune to Baby's mind control infection. In order to protect him, Buu hides Mr. Satan in one of his pods inside his body."
     },
     {
-        question: "In Dragon Ball GT, during the Super 17 Saga, who is the first earth fighter to encounter Android 17?",
+        question: "In Dragon Ball GT, during the Super 17 Saga, who is the first Earth fighter to encounter Android 17?",
         choices: [
             "Pan",
             "Goku",
