@@ -13,16 +13,8 @@ function QuestionTemplate(props) {
     const[index, setIndex] = useState(0);
     //Variable that will display if the correct or incorrect answer was given.
     const[rightWrong, setRightWrong] = useState();
-    //Variable that will load a question then the explanation after the question is answered.
-    const[questionOrExplanation, setQuestionOrExplanation] = useState(
-        <AskQuestion  
-            index={index} 
-            setSelectedAnswer={setSelectedAnswer} 
-            shuffledQuestionsArray={props.shuffledQuestionsArray}
-            guessButton={guessButton}
-            selectedAnswer={selectedAnswer}
-        />
-    );
+    //Variable that will load the askQuestion component if false. Then the explanation component if true.
+    const[isQuestionAnswered, setIsQuestionAnswered] = useState(false);
 
     function guessButton() {
         console.log(selectedAnswer);
@@ -38,12 +30,15 @@ function QuestionTemplate(props) {
             //set rightWrong to display an 'incorrect' answer.
             setRightWrong('Incorrect!'); 
         };
-        //load the explanation component
-        setQuestionOrExplanation(
-            <Explanation 
-                rightWrong={rightWrong}
-            />
-        );
+        //Change to True to load the Explanation Component
+        setIsQuestionAnswered(true);
+    }
+
+    function nextButton() {
+        //increse index by 1 to load the next question from the shuffledQuestionsArray
+        setIndex(index + 1);
+        //Change to false to load the AskQuestion Component
+        setIsQuestionAnswered(false);
     }
 
     useEffect(() => {
@@ -56,7 +51,22 @@ function QuestionTemplate(props) {
                 <h3>Correct Answers: {rightAnswers}</h3>
                 <h3>Incorrect Answers: {wrongAnswers}</h3>
             </div>
-           {questionOrExplanation}
+            {isQuestionAnswered? 
+                 <Explanation 
+                    rightWrong={rightWrong}
+                    shuffledQuestionsArray={props.shuffledQuestionsArray}
+                    index={index}
+                    nextButton={nextButton}
+                />
+                :
+                <AskQuestion  
+                    index={index} 
+                    setSelectedAnswer={setSelectedAnswer} 
+                    shuffledQuestionsArray={props.shuffledQuestionsArray}
+                    guessButton={guessButton}
+                    selectedAnswer={selectedAnswer}
+                />
+            }
         </section>
     );
 }
