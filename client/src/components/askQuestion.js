@@ -2,12 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 function AskQuestion(props) {
 
-    function selectOption(e) {
-        props.setSelectedAnswer(e.target.value);
-        console.log(e.target.value);
-        console.log(props.selectedAnswer);
-    }
-
     return (
         <div>
             <div>
@@ -18,11 +12,12 @@ function AskQuestion(props) {
                     <h4 key={key}>
                         <input 
                             type="radio" 
-                            onChange={selectOption} 
+                            onChange={(e) => props.setSelectedAnswer(e.target.value)} 
                             name='choices' 
                             value={choice}
+                            id={key + 'z'}
                         />
-                        <label htmlFor={choice}>{choice}</label>
+                        <label htmlFor={key + 'z'}>{choice}</label>
                         <br />
                     </h4>
                 ))}

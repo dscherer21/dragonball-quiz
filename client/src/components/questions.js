@@ -22,7 +22,7 @@ const questions = [
         explanation: "Ox King sends Goku and Chi-Chi to fetch Master Roshi to help him put the fire out. After arriving, Master Roshi fires a Kamehameha Wave at the fire and actually destroys the entire mountain."
     },
     {
-        question: "In Dragon Ball, during Pirate Cave fight, how does Goku escape from General Blue's paralysis attack?",
+        question: "In Dragon Ball, during the Pirate Cave fight, how does Goku escape from General Blue's paralysis attack?",
         choices: [
             "Bulma distracts General Blue by flashing him.",
             "A giant octopus causes a cave-in that falls on General Blue.",
@@ -68,7 +68,7 @@ const questions = [
     {
         question: "In Dragon Ball Z, during the Namek Saga, how does Vegeta recover from being beaten by Zarbon?",
         choices: [
-            "Zarbon put Vegeta in a Rejuvenation Chamber.",
+            "Zarbon puts Vegeta in a Rejuvenation Chamber.",
             "Gohan finds Vegeta and gives him a Senzu Bean.",
              "Dende heals him.",
             "Vegeta crawls to a nearby cave, where he waits til he is healed."
@@ -96,7 +96,7 @@ const questions = [
             "Caroni"
         ],
         answer: "Caroni",
-        explanation: "Right before Hercule could challenge Cell, students of his fighting dojo, Caroni and Pirozshki, showed up to challenge. Caroni was the first challenger. When Caroni tried to go for an aerial attack at Cell, he was quickly defeated when Cell raised his power to launch Caroni high in sky and landing outside the ring."
+        explanation: "Right before Hercule could challenge Cell, students of his fighting dojo, Caroni and Pirozshki, showed up to challenge. Caroni was the first challenger. When Caroni tried to go for an aerial attack at Cell, he was quickly defeated when Cell raised his power to launch Caroni high in the sky, and he landed outside the ring."
     },
     {
         question: "In Dragon Ball Z, during the Buu Saga, how did Krillin and Piccolo break free of Dabura's petrification spit?",
@@ -123,7 +123,7 @@ const questions = [
     {
         question: "In Dragon Ball GT, during the Baby Saga, how does Mr. Satan avoid being infected by Baby?",
         choices: [
-            "Baby delights in turning the world against it's savior.",
+            "Baby delights in turning the world against its savior.",
             "He hides in an underground bunker in his mansion.",
             "He is absorbed by Majin Buu.",
             "He pretends to be infected and is overlooked by Baby."
@@ -151,7 +151,7 @@ const questions = [
             "The wish to revive Goku."
         ],
         answer: "The wish for the most comfortable pair of underwear.",
-        explanation: "When they first encounter Oceanus Shenron, Goku insists on knowing which wish created her. At this question, Oceanus Shenron gets embarassed and blurts out that it was the underwear wish. Goku laughs out loud at this, which provokes Oceanus to attakc."
+        explanation: "When they first encounter Oceanus Shenron, Goku insists on knowing which wish created her. At this question, Oceanus Shenron gets embarassed and blurts out that it was the underwear wish. Goku laughs out loud at this, which provokes Oceanus to attack."
     },
     {
         question: "In Dragon Ball GT, during the Shadow Dragon Saga, who defeats Nuova Shenron the first time?",
@@ -173,7 +173,7 @@ const questions = [
             "At Hercule's Mansion"
         ],
         answer: "On King Kai's Planet",
-        explanation: "After Hercule gives Gokue 100 million zenni for saving the Earth from Buu, Chi-Chi allows him to give up farming and go train at King Kai's Planet. Beerus and Whis show up asking about the Super Saiyan God. Goku challenges Beerus and is quickly defeated."
+        explanation: "After Hercule gives Goku 100 million zenni for saving the Earth from Buu, Chi-Chi allows him to give up farming and go train at King Kai's Planet. Beerus and Whis show up asking about the Super Saiyan God. Goku challenges Beerus and is quickly defeated."
     },
     {
         question: "In Dragon Ball Super, during the Golden Frieza Saga, what does Vegeta tell Whis is the tastiest food of all?",
@@ -195,7 +195,7 @@ const questions = [
             "To sing The Song That Never Ends"
         ],
         answer: "To suck on a pacifier",
-        explanation: "When Trunks notices that Vegeta is starting phase out faster, Potage suggests that he suck on the Commeson Key, which looks like a pacifier, to slow the process. Goku makes fun of him for chewing on a pacifier. Later, when Vegeta learns what a pacifier is, he states that he would have rather died than be seen sucking on the key."
+        explanation: "When Trunks notices that Vegeta is starting to phase out faster, Potage suggests that he suck on the Commeson Key, which looks like a pacifier, to slow the process. Goku makes fun of him for chewing on a pacifier. Later, when Vegeta learns what a pacifier is, he states that he would have rather died than be seen sucking on the key."
     },
     {
         question: "In Dragon Ball Super, during the Goku Black Saga, why has Goku Black teamed up with Zamasu?",
