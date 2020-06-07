@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import AskQuestion from './askQuestion';
 import Explanation from './explanation';
+import ResultsTemplate from './resultsTemplate';
 
 function QuestionTemplate(props) {
     //Variable that counts the number of correct answers given.
@@ -15,9 +16,10 @@ function QuestionTemplate(props) {
     const[rightWrong, setRightWrong] = useState();
     //Variable that will load the askQuestion component if false. Then the explanation component if true.
     const[isQuestionAnswered, setIsQuestionAnswered] = useState(false);
+    //Variable to help decide which result to display
+    const[resultsIndex, setResultsIndex] = useState();
 
     function guessButton() {
-        console.log(selectedAnswer);
         //if the chosen answer is equal to the correct answer...
         if(selectedAnswer === props.shuffledQuestionsArray[index].answer) {
             //increase rightAnswers variable by 1.
@@ -35,15 +37,28 @@ function QuestionTemplate(props) {
     }
 
     function nextButton() {
-        //increse index by 1 to load the next question from the shuffledQuestionsArray
-        setIndex(index + 1);
-        //Change to false to load the AskQuestion Component
-        setIsQuestionAnswered(false);
+        //set the rightAnswers variable to half rounded up.
+        if(Math.round(wrongAnswers/2) === 0) {
+            setResultsIndex(0);
+        } else {
+            setResultsIndex(Math.round(wrongAnswers/2) - 1);
+        }
+        
+        if(index === 19) {
+            //load the results page
+            props.setMainDisplay(
+                <ResultsTemplate 
+                    rightAnswers={rightAnswers}
+                    resultsIndex={resultsIndex}
+                />
+            );
+        } else {
+            //increse index by 1 to load the next question from the shuffledQuestionsArray
+            setIndex(index + 1);
+            //Change to false to load the AskQuestion Component
+            setIsQuestionAnswered(false);
+        };
     }
-
-    useEffect(() => {
-        console.log(props.shuffledQuestionsArray);
-    });
 
     return (
         <section>

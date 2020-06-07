@@ -1,53 +1,64 @@
+import Goku from './../media/goku.gif';
+import Vegeta from './../media/vegeta.gif';
+import Piccolo from './../media/piccolo.png';
+import Gohan from './../media/gohan.png';
+import Trunks from './../media/trunks.png';
+import Krillin from './../media/krillin.png';
+import Tien from './../media/tien.png';
+import Roshi from './../media/masterroshi.png';
+import Chiaotzu from './../media/chiaotzu.png';
+import Yamcha from './../media/yamcha.png';
+
 const resultsArray = [
     {
         character: "Goku",
         summary: "You are Goku!",
-        image: "./../media/goku.gif"
+        image: Goku
     },
     {
         character: "Vegeta",
         summary: "You are Vegeta!",
-        image: "./../media/vegeta.gif"
+        image: Vegeta
     },
     {
         character: "Piccolo",
         summary: "You are Piccolo!",
-        image: "./../media/piccolo.png"
+        image: Piccolo
     },
     {
         character: "Gohan",
         summary: "You are Gohan!",
-        image: "./../media/gohan.png"
+        image: Gohan
     },
     {
         character: "Trunks",
         summary: "You are Trunks!",
-        image: "./../media/trunks.png"
+        image: Trunks
     },
     {
         character: "Krillin",
         summary: "You are Krillin!",
-        image: "./../media/krillin.png"
+        image: Krillin
     },
     {
         character: "Tien",
         summary: "You are Tien!",
-        image: "./../media/tien.png"
+        image: Tien
     },
     {
         character: "Master Roshi",
         summary: "You are Master Roshi!",
-        image: "./../media/masterroshi.png"
+        image: Roshi
     },
     {
         character: "Chiaotzu",
         summary: "You are Chiaotzu!",
-        image: "./../media/chiaotzu.png"
+        image: Chiaotzu
     },
     {
         character: "Yamcha",
         summary: "You are Yamcha!",
-        image: "./../media/yamcha.png"
+        image: Yamcha
     }
 ];
 

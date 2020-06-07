@@ -73,7 +73,7 @@ const questions = [
              "Dende heals him.",
             "Vegeta crawls to a nearby cave, where he waits til he is healed."
         ],
-        answer: "Zarbon put Vegeta in a Rejuvenation Chamber.",
+        answer: "Zarbon puts Vegeta in a Rejuvenation Chamber.",
         explanation: "At first, Zarbon left Vegeta for dead, but came back to collect Vegeta after Frieza ordered him to. Zarbon put Vegeta in a Rejuvenation Chamber, so they could question him about the Dragon Balls and discuss his betrayal of Frieza after he recovered."
     },
     {
@@ -190,8 +190,8 @@ const questions = [
         question: "In Dragon Ball Super, during the Duplicate Vegeta Saga, what does Potage tell Vegeta to do to slow him from phasing out of existance?",
         choices: [
             "To suck on a pacifier",
-            "To Hug his son",
-            "To stand in ridiculous pose",
+            "To Hug Trunks",
+            "To to do a ridiculous ritual dance",
             "To sing The Song That Never Ends"
         ],
         answer: "To suck on a pacifier",

@@ -1,24 +1,34 @@
 {
   "files": {
     "main.css": "/static/css/main.e149e4b3.chunk.css",
-    "main.js": "/static/js/main.7ab2c3dd.chunk.js",
-    "main.js.map": "/static/js/main.7ab2c3dd.chunk.js.map",
+    "main.js": "/static/js/main.c7c2a1e5.chunk.js",
+    "main.js.map": "/static/js/main.c7c2a1e5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.cfae3202.js",
     "runtime-main.js.map": "/static/js/runtime-main.cfae3202.js.map",
-    "static/js/2.5cbf26f2.chunk.js": "/static/js/2.5cbf26f2.chunk.js",
-    "static/js/2.5cbf26f2.chunk.js.map": "/static/js/2.5cbf26f2.chunk.js.map",
+    "static/js/2.cc2b1e7e.chunk.js": "/static/js/2.cc2b1e7e.chunk.js",
+    "static/js/2.cc2b1e7e.chunk.js.map": "/static/js/2.cc2b1e7e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e81d80d4c1a8f741d31506661c64e9c9.js": "/precache-manifest.e81d80d4c1a8f741d31506661c64e9c9.js",
+    "precache-manifest.3b234c13147a8b8fecd8b8b776df6c06.js": "/precache-manifest.3b234c13147a8b8fecd8b8b776df6c06.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e149e4b3.chunk.css.map": "/static/css/main.e149e4b3.chunk.css.map",
-    "static/js/2.5cbf26f2.chunk.js.LICENSE.txt": "/static/js/2.5cbf26f2.chunk.js.LICENSE.txt",
+    "static/js/2.cc2b1e7e.chunk.js.LICENSE.txt": "/static/js/2.cc2b1e7e.chunk.js.LICENSE.txt",
+    "static/media/chiaotzu.png": "/static/media/chiaotzu.29a3bb3f.png",
     "static/media/App.scss": "/static/media/dragonballbackground.523578a0.jpg",
-    "static/media/dragonballzfunimationintro.mp3": "/static/media/dragonballzfunimationintro.e5b08a8b.mp3"
+    "static/media/dragonballzfunimationintro.mp3": "/static/media/dragonballzfunimationintro.e5b08a8b.mp3",
+    "static/media/gohan.png": "/static/media/gohan.cc9b4f46.png",
+    "static/media/goku.gif": "/static/media/goku.c571f021.gif",
+    "static/media/krillin.png": "/static/media/krillin.69d1ba12.png",
+    "static/media/masterroshi.png": "/static/media/masterroshi.babf3d99.png",
+    "static/media/piccolo.png": "/static/media/piccolo.d78671e7.png",
+    "static/media/tien.png": "/static/media/tien.8e9f5d13.png",
+    "static/media/trunks.png": "/static/media/trunks.7d3b5909.png",
+    "static/media/vegeta.gif": "/static/media/vegeta.76e285e5.gif",
+    "static/media/yamcha.png": "/static/media/yamcha.7e635104.png"
   },
   "entrypoints": [
     "static/js/runtime-main.cfae3202.js",
-    "static/js/2.5cbf26f2.chunk.js",
+    "static/js/2.cc2b1e7e.chunk.js",
     "static/css/main.e149e4b3.chunk.css",
-    "static/js/main.7ab2c3dd.chunk.js"
+    "static/js/main.c7c2a1e5.chunk.js"
   ]
 }

@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.scss';
 import Audio from './media/dragonballzfunimationintro.mp3';
 import QuestionTemplate from './components/questionTemplate';
 import questionsArray from './components/questions';
+//import ResultsTemplate from './components/resultsTemplate';
 
 function App() {
   const[mainDisplay, setMainDisplay] = useState(
@@ -12,19 +13,21 @@ function App() {
     </section>
   );
   //On the initial page load, take questionsArray and shuffle it.
-  const[shuffledQuestionsArray, setShuffledQuestionsArray] = useState(
+  const[shuffledQuestionsArray] = useState(
     questionsArray.map((a) => ({sort: Math.random(), value: a}))
     .sort((a, b) => a.sort - b.sort)
     .map((a) => a.value)
   );
 
   function startButton() {
-    setMainDisplay(<QuestionTemplate shuffledQuestionsArray={shuffledQuestionsArray} />)
+    //when the start button is clicked switch the QuestionTemplate
+    setMainDisplay(
+      <QuestionTemplate 
+        shuffledQuestionsArray={shuffledQuestionsArray}
+        setMainDisplay={setMainDisplay} 
+      />
+    );
   }
-
-  /*useEffect(() => {
-    console.log(shuffledQuestionsArray);
-  });*/
 
   return (
     <div className="App">
