@@ -17,9 +17,7 @@ function ResultsTemplate(props) {
                 />
             </div>
             <div>
-                <h3>
-                    <p>{resultsArray[props.resultsIndex].summary}</p>
-                </h3>
+                <p>{resultsArray[props.resultsIndex].summary}</p>
             </div>
        </section>
     );

@@ -7,7 +7,7 @@ function AskQuestion(props) {
             <div>
                 <h3>{props.shuffledQuestionsArray[props.index].question}</h3>
             </div>
-            <div>
+            <div id='choicesDiv'>
                 {props.shuffledQuestionsArray[props.index].choices.map((choice, key) => (
                     <h4 key={key}>
                         <input 

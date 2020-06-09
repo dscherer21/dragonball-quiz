@@ -32,12 +32,12 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Dragon Ball Quiz</h1>
+        <h1 id='header'><span>Dragon Ball Quiz</span></h1>
       </header>
       <main>
         {mainDisplay}
         <section>
-          <h4>Dragon Ball Z Funimation Intro</h4>
+          <h4 id='audioTitle'><span>Dragon Ball Z Funimation Intro</span></h4>
           <audio controls loop='loop' title='Dragon Ball Z Funimation Intro'>
             <source src={Audio} type="audio/mpeg" />
             Your browser does not support the audio element.
