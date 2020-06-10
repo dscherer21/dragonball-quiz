@@ -22,7 +22,7 @@ function AskQuestion(props) {
                     </h4>
                 ))}
             </div>
-            <button onClick={props.guessButton}>Guess!</button>
+            <button id='guessButton' onClick={props.guessButton}>Guess!</button>
         </div>
     );
 }

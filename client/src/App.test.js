@@ -15,6 +15,12 @@ import resultsArray from './components/results.js';
 //Configuring Enzyme
 configure({ adapter: new Adapter() });
 
+const mockSubmit = jest.fn();
+const div = document.createElement('div');
+let rightWrong;
+let setSelectedAnswer;
+let selectedAnswer;
+let index = 0;
 let shuffledQuestionsArray = [
   {
     question: "In Dragon Ball, who was the original owner of the Power Pole?",
@@ -64,16 +70,11 @@ test(' resultsArray contains Goku and Vegeta', () =>{
 });
 
 test('App renders without crashing', () => {
-  const div = document.createElement('div');
   ReactDOM.render(<App />, div);
 });
 
 test('AskQuestion renders without crashing', () => {
-  const div = document.createElement('div');
-  let index=0;
-  let setSelectedAnswer;
   let guessButton;
-  let selectedAnswer;
  
   ReactDOM.render(
     <AskQuestion  
@@ -87,9 +88,6 @@ test('AskQuestion renders without crashing', () => {
 });
 
 test('Explanation renders without crashing', () => {
-  const div = document.createElement('div');
-  let rightWrong;
-  let index = 0;
   let nextButton;
   
   ReactDOM.render(
@@ -103,7 +101,6 @@ test('Explanation renders without crashing', () => {
 });
 
 test('QuestionTemplate renders without crashing', () => {
-  const div = document.createElement('div');
   let setMainDisplay;
   
   ReactDOM.render(
@@ -115,7 +112,6 @@ test('QuestionTemplate renders without crashing', () => {
 });
 
 test('ResultsTemplate renders without crashing', () => {
-  const div = document.createElement('div');
   let rightAnswers = 0;
   let resultsIndex = 0;
   ReactDOM.render(
@@ -126,9 +122,37 @@ test('ResultsTemplate renders without crashing', () => {
   , div);
 });
 
+test('nextButton registers click', () => {
+  const wrapper = shallow(
+    <Explanation 
+      rightWrong={rightWrong}
+      shuffledQuestionsArray={shuffledQuestionsArray}
+      index={index}
+      nextButton={mockSubmit}
+    />
+  );
+  wrapper.find('#nextButton').simulate('click');
+  expect(mockSubmit).toHaveBeenCalled();
+});
+
+test('guessButton registers click', () => {
+  const wrapper = shallow(
+    <AskQuestion  
+      index={index} 
+      setSelectedAnswer={setSelectedAnswer} 
+      shuffledQuestionsArray={shuffledQuestionsArray}
+      guessButton={mockSubmit}
+      selectedAnswer={selectedAnswer}
+    />
+  );
+  wrapper.find('#guessButton').simulate('click');
+  expect(mockSubmit).toHaveBeenCalled();
+});
+
 test('startButton registers click', () => {
-  const mockSubmit = jest.fn();
-  const wrapper = shallow(<App startButton={mockSubmit} />);
+  const wrapper = shallow(
+    <App />
+  );
   wrapper.find('#startButton').simulate('click');
   expect(mockSubmit).toHaveBeenCalled();
 });
