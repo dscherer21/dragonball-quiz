@@ -9,7 +9,7 @@ function App() {
   const[mainDisplay, setMainDisplay] = useState(
     <section>
       <p>Welcome to the <span>Dragon Ball Quiz</span>! This quiz will test your knowledge of the entire <span>Dragon Ball</span> franchise. It will contain questions from <span>Dragon Ball</span>, <span>Dragon Ball Z</span>, <span>Dragon Ball GT</span>, and <span>Dragon Ball Super</span>. Your final results will then compared to a character from the show. Whenever you're ready, click the Start button.</p>
-      <button onClick={startButton}>Start</button>
+      <button id='startButton' onClick={startButton}>Start</button>
     </section>
   );
   //On the initial page load, take questionsArray and shuffle it.

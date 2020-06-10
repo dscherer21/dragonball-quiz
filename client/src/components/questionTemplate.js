@@ -67,7 +67,7 @@ function QuestionTemplate(props) {
                 <h3>Incorrect Answers: {wrongAnswers}</h3>
             </div>
             {isQuestionAnswered? 
-                 <Explanation 
+                <Explanation 
                     rightWrong={rightWrong}
                     shuffledQuestionsArray={props.shuffledQuestionsArray}
                     index={index}
