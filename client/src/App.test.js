@@ -15,6 +15,20 @@ import resultsArray from './components/results.js';
 //Configuring Enzyme
 configure({ adapter: new Adapter() });
 
+let shuffledQuestionsArray = [
+  {
+    question: "In Dragon Ball, who was the original owner of the Power Pole?",
+    choices: [
+        "Goku",
+        "Master Roshi",
+        "Grandpa Gohan",
+        "Korin"
+    ],
+    answer: "Korin",
+    explanation: "Goku is shown to be in possession of the Power Pole through most of Dragon Ball, however, Korin mentioned in the episode 'Lost and Found' that he had given the Pole to Master Roshi when he had climbed Korin Tower. Master Roshi eventually gave the Pole to Grandpa Gohan, who eventually gave it to Goku."
+  }
+];
+
 let container = null;
 beforeEach(() => {
   // setup a DOM element as a render target
@@ -60,25 +74,12 @@ test('AskQuestion renders without crashing', () => {
   let setSelectedAnswer;
   let guessButton;
   let selectedAnswer;
-  let shuffledQuestionsArray= [
-    {
-      question: "In Dragon Ball, who was the original owner of the Power Pole?",
-      choices: [
-          "Goku",
-          "Master Roshi",
-          "Grandpa Gohan",
-          "Korin"
-      ],
-      answer: "Korin",
-      explanation: "Goku is shown to be in possession of the Power Pole through most of Dragon Ball, however, Korin mentioned in the episode 'Lost and Found' that he had given the Pole to Master Roshi when he had climbed Korin Tower. Master Roshi eventually gave the Pole to Grandpa Gohan, who eventually gave it to Goku."
-    }
-  ];
+ 
   ReactDOM.render(
     <AskQuestion  
       index={index} 
       setSelectedAnswer={setSelectedAnswer} 
       shuffledQuestionsArray={shuffledQuestionsArray}
-    
       guessButton={guessButton}
       selectedAnswer={selectedAnswer}
     />
@@ -90,19 +91,7 @@ test('Explanation renders without crashing', () => {
   let rightWrong;
   let index = 0;
   let nextButton;
-  let shuffledQuestionsArray = [
-    {
-      question: "In Dragon Ball, who was the original owner of the Power Pole?",
-      choices: [
-          "Goku",
-          "Master Roshi",
-          "Grandpa Gohan",
-          "Korin"
-      ],
-      answer: "Korin",
-      explanation: "Goku is shown to be in possession of the Power Pole through most of Dragon Ball, however, Korin mentioned in the episode 'Lost and Found' that he had given the Pole to Master Roshi when he had climbed Korin Tower. Master Roshi eventually gave the Pole to Grandpa Gohan, who eventually gave it to Goku."
-    }
-  ];
+  
   ReactDOM.render(
     <Explanation 
       rightWrong={rightWrong}
@@ -116,19 +105,7 @@ test('Explanation renders without crashing', () => {
 test('QuestionTemplate renders without crashing', () => {
   const div = document.createElement('div');
   let setMainDisplay;
-  let shuffledQuestionsArray = [
-    {
-      question: "In Dragon Ball, who was the original owner of the Power Pole?",
-      choices: [
-          "Goku",
-          "Master Roshi",
-          "Grandpa Gohan",
-          "Korin"
-      ],
-      answer: "Korin",
-      explanation: "Goku is shown to be in possession of the Power Pole through most of Dragon Ball, however, Korin mentioned in the episode 'Lost and Found' that he had given the Pole to Master Roshi when he had climbed Korin Tower. Master Roshi eventually gave the Pole to Grandpa Gohan, who eventually gave it to Goku."
-    }
-  ];
+  
   ReactDOM.render(
     <QuestionTemplate 
       shuffledQuestionsArray={shuffledQuestionsArray}
