@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AskQuestion from './askQuestion';
 import Explanation from './explanation';
 import ResultsTemplate from './resultsTemplate';
@@ -34,15 +34,18 @@ function QuestionTemplate(props) {
         };
         //Change to True to load the Explanation Component
         setIsQuestionAnswered(true);
-    }
+    };
 
     function nextButton() {
+        console.log(wrongAnswers);
+        console.log(Math.round(wrongAnswers/2) - 1);
+        console.log(resultsIndex);
         //set the rightAnswers variable to half rounded up.
-        if(Math.round(wrongAnswers/2) === 0) {
+        /*if(Math.round(wrongAnswers/2) === 0) {
             setResultsIndex(0);
         } else {
             setResultsIndex(Math.round(wrongAnswers/2) - 1);
-        }
+        }*/
         
         if(index === 19) {
             //load the results page
@@ -59,6 +62,15 @@ function QuestionTemplate(props) {
             setIsQuestionAnswered(false);
         };
     }
+
+    useEffect(() => {
+        //set the rightAnswers variable to half rounded up.
+        if(Math.round(wrongAnswers/2) === 0) {
+            setResultsIndex(0);
+        } else {
+            setResultsIndex(Math.round(wrongAnswers/2) - 1);
+        }
+    }, [wrongAnswers]);
 
     return (
         <section>

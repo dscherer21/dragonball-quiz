@@ -3,7 +3,6 @@ import './App.scss';
 import Audio from './media/dragonballzfunimationintro.mp3';
 import QuestionTemplate from './components/questionTemplate';
 import questionsArray from './components/questions';
-//import ResultsTemplate from './components/resultsTemplate';
 
 function App() {
   const[mainDisplay, setMainDisplay] = useState(
