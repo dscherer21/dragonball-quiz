@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react';
-//import { act, renderHook } from '@testing-library/react-hooks';
+import { act, renderHook } from 'react-dom/test-utils';
 import { unmountComponentAtNode } from "react-dom";
 import { shallow, configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import App, { startButton } from './App';
+import App from './App';
 import AskQuestion from './components/askQuestion.js';
 import Explanation from './components/explanation.js';
 import QuestionTemplate from './components/questionTemplate.js';
 import ResultsTemplate from './components/resultsTemplate.js';
 import questions from './components/questions.js';
 import resultsArray from './components/results.js';
-import { act, renderHook } from 'react-dom/test-utils';
+import IntroTemplate from './components/introTemplate';
+import Audio from './media/dragonballzfunimationintro.mp3';
+
 
 //Configuring Enzyme
 configure({ adapter: new Adapter() });
@@ -62,27 +64,64 @@ describe('App functionality', () => {
   });
 
   test('renders without crashing', () => {
-    let wrapper = mount(<App />);
+    let wrapper = shallow(<App />);
+    expect(wrapper).not.toBeNull();
+  });
+
+  /*test('startButton registers click', () => {
+    const wrapper = shallow(<App />);
+    const instance = wrapper.instance();
+    spyOn(instance, 'startButton').and.callThrough();
+    expect(instance.startButton).toHaveBeenCalled();
+  });*/
+
+  test('audio element plays mp3', () => {
+    let wrapper = shallow(<App />);
+    wrapper.find("audio").simulate('click');
+    expect(Audio).toHaveBeenCalled();
+  });
+
+});
+
+describe('IntroTemplate functionality', () => {
+  let startButton;
+  test('renders without crashing', () => {
+    let wrapper = shallow(<IntroTemplate startButton={startButton} />);
     expect(wrapper).not.toBeNull();
   });
 
   test('startButton registers click', () => {
-    const startButton = jest.fn();
-    const wrapper = mount(<App startButton={startButton} />);
+    const mockSubmit = jest.fn();
+    const wrapper = shallow(<IntroTemplate startButton={mockSubmit} />);
     wrapper.find('#startButton').simulate('click');
-    expect(startButton).toHaveBeenCalled();
+    expect(mockSubmit).toHaveBeenCalled();
+  })
+
+  test('renders Welcome in the document', () => {
+    const { getByText } = render(
+      <IntroTemplate startButton={startButton} />
+    );
+    const linkElement = getByText(/Welcome/i);
+    expect(linkElement).toBeInTheDocument();
   });
+
 });
 
-test('questions array contains Korin and Master Roshi', () =>{
-  expect(questions[0].answer).toContain("Korin");
-  expect(questions[1].choices[1]).toContain("Master Roshi fired a Kamehameha Wave at it.");
+describe('questions and results arrays', () => {
+
+  test('questions array contains Korin and Master Roshi', () =>{
+    expect(questions[0].answer).toContain("Korin");
+    expect(questions[1].choices[1]).toContain("Master Roshi fired a Kamehameha Wave at it.");
+  });
+  
+  test(' resultsArray contains Goku and Vegeta', () =>{
+    expect(resultsArray[0].character).toContain("Goku");
+    expect(resultsArray[1].character).toContain("Vegeta");
+  });
+
 });
 
-test(' resultsArray contains Goku and Vegeta', () =>{
-  expect(resultsArray[0].character).toContain("Goku");
-  expect(resultsArray[1].character).toContain("Vegeta");
-});
+
 
 describe('QuestionTemplate functionality', () => {
 
@@ -128,10 +167,11 @@ describe('AskQuestion functionality', () => {
     wrapper.find('#guessButton').simulate('click');
     expect(mockSubmit).toHaveBeenCalled();
   });
+
 });
 
 describe('Explanation component functionality', () => {
-  
+
   test('renders without crashing', () => {
     const div = document.createElement('div');
     let nextButton;
