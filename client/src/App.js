@@ -5,7 +5,7 @@ import QuestionTemplate from './components/questionTemplate';
 import questionsArray from './components/questions';
 import IntroTemplate from './components/introTemplate';
 
-function App() {
+function App(props) {
   const[mainDisplay, setMainDisplay] = useState(
     <IntroTemplate  startButton={startButton} />
   );

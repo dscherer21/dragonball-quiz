@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react';
 import { act, renderHook } from 'react-dom/test-utils';
-import { unmountComponentAtNode } from "react-dom";
 import { shallow, configure, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import App from './App';
@@ -19,11 +18,7 @@ import Audio from './media/dragonballzfunimationintro.mp3';
 //Configuring Enzyme
 configure({ adapter: new Adapter() });
 
-let rightWrong;
-let setSelectedAnswer;
-let selectedAnswer;
-let index = 0;
-let shuffledQuestionsArray = [
+const fakeData = [
   {
     question: "In Dragon Ball, who was the original owner of the Power Pole?",
     choices: [
@@ -36,20 +31,6 @@ let shuffledQuestionsArray = [
     explanation: "Goku is shown to be in possession of the Power Pole through most of Dragon Ball, however, Korin mentioned in the episode 'Lost and Found' that he had given the Pole to Master Roshi when he had climbed Korin Tower. Master Roshi eventually gave the Pole to Grandpa Gohan, who eventually gave it to Goku."
   }
 ];
-
-let container = null;
-beforeEach(() => {
-  // setup a DOM element as a render target
-  container = document.createElement("div");
-  document.body.appendChild(container);
-});
-
-afterEach(() => {
-  // cleanup on exiting
-  unmountComponentAtNode(container);
-  container.remove();
-  container = null;
-});
 
 test('Sample Test', () =>{
   expect(true).toBeTruthy();
@@ -68,17 +49,9 @@ describe('App functionality', () => {
     expect(wrapper).not.toBeNull();
   });
 
-  /*test('startButton registers click', () => {
-    const wrapper = shallow(<App />);
-    const instance = wrapper.instance();
-    spyOn(instance, 'startButton').and.callThrough();
-    expect(instance.startButton).toHaveBeenCalled();
-  });*/
-
-  test('audio element plays mp3', () => {
+  test('audio element has source of Audio', () => {
     let wrapper = shallow(<App />);
-    wrapper.find("audio").simulate('click');
-    expect(Audio).toHaveBeenCalled();
+    expect(wrapper.find("source").prop('src')).toEqual(Audio);
   });
 
 });
@@ -126,12 +99,11 @@ describe('questions and results arrays', () => {
 describe('QuestionTemplate functionality', () => {
 
   test('QuestionTemplate renders without crashing', () => {
-    let setMainDisplay;
     const div = document.createElement('div');
     ReactDOM.render(
       <QuestionTemplate 
-        shuffledQuestionsArray={shuffledQuestionsArray}
-        setMainDisplay={setMainDisplay} 
+        shuffledQuestionsArray={fakeData}
+        setMainDisplay 
       />
     , div);
   });
@@ -144,11 +116,11 @@ describe('AskQuestion functionality', () => {
     const div = document.createElement('div');
     ReactDOM.render(
       <AskQuestion  
-        index={index} 
-        setSelectedAnswer={setSelectedAnswer} 
-        shuffledQuestionsArray={shuffledQuestionsArray}
+        index='0'
+        setSelectedAnswer
+        shuffledQuestionsArray={fakeData}
         guessButton={guessButton}
-        selectedAnswer={selectedAnswer}
+        selectedAnswer
       />
       , div);
   });
@@ -157,11 +129,11 @@ describe('AskQuestion functionality', () => {
     const mockSubmit = jest.fn();
     const wrapper = mount(
       <AskQuestion  
-        index={index} 
-        setSelectedAnswer={setSelectedAnswer} 
-        shuffledQuestionsArray={shuffledQuestionsArray}
+        index='0' 
+        setSelectedAnswer
+        shuffledQuestionsArray={fakeData}
         guessButton={mockSubmit}
-        selectedAnswer={selectedAnswer}
+        selectedAnswer
       />
     );
     wrapper.find('#guessButton').simulate('click');
@@ -173,13 +145,13 @@ describe('AskQuestion functionality', () => {
 describe('Explanation component functionality', () => {
 
   test('renders without crashing', () => {
-    const div = document.createElement('div');
     let nextButton;
+    const div = document.createElement('div');
     ReactDOM.render(
       <Explanation 
-        rightWrong={rightWrong}
-        shuffledQuestionsArray={shuffledQuestionsArray}
-        index={index}
+        rightWrong
+        shuffledQuestionsArray={fakeData}
+        index='0'
         nextButton={nextButton}
       />
     , div);
@@ -189,9 +161,9 @@ describe('Explanation component functionality', () => {
     const mockSubmit = jest.fn();
     const wrapper = mount(
       <Explanation 
-        rightWrong={rightWrong}
-        shuffledQuestionsArray={shuffledQuestionsArray}
-        index={index}
+        rightWrong
+        shuffledQuestionsArray={fakeData}
+        index='0'
         nextButton={mockSubmit}
       />
     );
