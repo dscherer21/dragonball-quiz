@@ -3,7 +3,7 @@ import React from 'react';
 function AskQuestion(props) {
 
     return (
-        <div>
+        <div className='fader'>
             <div>
                 {props.shuffledQuestionsArray[props.index].question}
             </div>

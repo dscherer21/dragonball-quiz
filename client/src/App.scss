@@ -1,3 +1,19 @@
+
+/*@mixin keyframes( $animationName ) {
+    @-webkit-keyframes $animationName {
+        @content;
+    };
+    @-moz-keyframes $animationName {
+        @content;
+    };
+    @-o-keyframes $animationName {
+        @content;
+    };
+    @keyframes $animationName {
+        @content;
+    };
+};*/
+
 * {
     box-sizing: border-box;
   }
@@ -53,6 +69,33 @@
   img {
     width: 80%;
   };
+
+  .fader {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+
+    /*@include keyframes( fadeIn ) {
+      0% {
+        opacity: 0;
+      };
+
+      100% {
+        opacity: 1;
+      };
+    };*/
+  };
+
+  @keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
 
   #audioTitle {
     font-family: 'Staatliches', cursive;

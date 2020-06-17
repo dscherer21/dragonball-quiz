@@ -25,27 +25,18 @@ function QuestionTemplate(props) {
             //increase rightAnswers variable by 1.
             setRightAnswers(rightAnswers + 1);
             //set rightWrong to display a 'correct' answer.
-            setRightWrong('Correct!');   
+            setRightWrong(<h2 style={{ color: 'green' }}>Correct!</h2>);   
         } else {
             //if not, increase wrongAnswers variable by 1.
             setWrongAnswers(wrongAnswers + 1);
             //set rightWrong to display an 'incorrect' answer.
-            setRightWrong('Incorrect!'); 
+            setRightWrong(<h2 style={{ color: 'red' }}>Incorrect!</h2>); 
         };
         //Change to True to load the Explanation Component
         setIsQuestionAnswered(true);
     };
 
     function nextButton() {
-        console.log(wrongAnswers);
-        console.log(Math.round(wrongAnswers/2) - 1);
-        console.log(resultsIndex);
-        //set the rightAnswers variable to half rounded up.
-        /*if(Math.round(wrongAnswers/2) === 0) {
-            setResultsIndex(0);
-        } else {
-            setResultsIndex(Math.round(wrongAnswers/2) - 1);
-        }*/
         
         if(index === 19) {
             //load the results page
@@ -74,26 +65,28 @@ function QuestionTemplate(props) {
 
     return (
         <section>
-            <div>
-                <h3>Correct Answers: {rightAnswers}</h3>
-                <h3>Incorrect Answers: {wrongAnswers}</h3>
+            <div className='fader'>
+                <div>
+                    <h3>Correct Answers: {rightAnswers}</h3>
+                    <h3>Incorrect Answers: {wrongAnswers}</h3>
+                </div>
+                {isQuestionAnswered? 
+                    <Explanation 
+                        rightWrong={rightWrong}
+                        shuffledQuestionsArray={props.shuffledQuestionsArray}
+                        index={index}
+                        nextButton={nextButton}
+                    />
+                    :
+                    <AskQuestion  
+                        index={index} 
+                        setSelectedAnswer={setSelectedAnswer} 
+                        shuffledQuestionsArray={props.shuffledQuestionsArray}
+                        guessButton={guessButton}
+                        selectedAnswer={selectedAnswer}
+                    />
+                }
             </div>
-            {isQuestionAnswered? 
-                <Explanation 
-                    rightWrong={rightWrong}
-                    shuffledQuestionsArray={props.shuffledQuestionsArray}
-                    index={index}
-                    nextButton={nextButton}
-                />
-                :
-                <AskQuestion  
-                    index={index} 
-                    setSelectedAnswer={setSelectedAnswer} 
-                    shuffledQuestionsArray={props.shuffledQuestionsArray}
-                    guessButton={guessButton}
-                    selectedAnswer={selectedAnswer}
-                />
-            }
         </section>
     );
 }
