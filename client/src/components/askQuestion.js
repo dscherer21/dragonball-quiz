@@ -23,6 +23,8 @@ function AskQuestion(props) {
                 ))}
             </div>
             <button id='guessButton' onClick={props.guessButton}>Guess!</button>
+            <br/>
+            <br/>
         </div>
     );
 }
