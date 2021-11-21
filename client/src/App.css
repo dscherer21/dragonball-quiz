@@ -1,10 +1,165 @@
+/*@mixin keyframes( $animationName ) {
+    @-webkit-keyframes $animationName {
+        @content;
+    };
+    @-moz-keyframes $animationName {
+        @content;
+    };
+    @-o-keyframes $animationName {
+        @content;
+    };
+    @keyframes $animationName {
+        @content;
+    };
+};*/
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   text-align: center;
-  background-image: url('./media/dragonballbackground.jpg');
+  background-image: url("./media/dragonballbackground.jpg");
   background-size: cover;
+  font-family: 'Open Sans', sans-serif;
 }
 
+.App {
+  margin: auto;
+  width: 70%;
+}
+
+header {
+  border: 2px solid black;
+  background-color: #f5e9ce;
+  border-radius: 30px;
+  margin: 5px 0;
+  font-family: 'Staatliches', cursive;
+}
+
+span {
+  font-family: 'Staatliches', cursive;
+  color: orange;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+section {
+  border: 2px solid black;
+  background-color: #f5e9ce;
+  margin: 5px 0;
+  border-radius: 30px;
+  padding: 5px 6px;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+button {
+  font-size: 22px;
+  border-radius: 15px;
+  padding: 2% 8%;
+  background-color: orange;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(orange), color-stop(yellow), to(orange));
+  background-image: linear-gradient(orange, yellow, orange);
+  -webkit-box-shadow: 3px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 80%;
+}
+
+.fader {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+  /*@include keyframes( fadeIn ) {
+      0% {
+        opacity: 0;
+      };
+
+      100% {
+        opacity: 1;
+      };
+    };*/
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#audioTitle {
+  font-family: 'Staatliches', cursive;
+}
+
+#choicesDiv {
+  text-align: left;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 45px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  img {
+    width: 60%;
+  }
+  audio {
+    width: 80%;
+  }
+  #header {
+    font-size: 75px;
+  }
+  #choicesDiv {
+    font-size: 30px;
+  }
+  #audioTitle {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 25px;
+  }
+  button {
+    font-size: 30px;
+  }
+  #header {
+    font-size: 90px;
+  }
+  #audioTitle {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1331px) {
+  audio {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=App.css.map */
